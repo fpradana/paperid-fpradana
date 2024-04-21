@@ -1,0 +1,50 @@
+.user-details {
+  max-width: 600px;
+  width: 84vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.user-details h2 {
+  font-size: 24px;
+  margin-bottom: 38px;
+}
+
+.user-details p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.user-details button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 38px;
+}
+
+.user-details button:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .user-details {
+    padding: 22px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .user-details p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+}

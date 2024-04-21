@@ -1,0 +1,39 @@
+<h1 class="headline">Welcome to Dana Corp</h1>
+<p class="subtitle">We are a group of company that are focusing on tech industry. Here are some of our child company:</p>
+
+<div class="user-list" *ngIf="users.length === 0; else userList">
+  <p>Loading...</p>
+</div>
+
+<ng-template #userList>
+  <div class="table-container">
+    <table class="user-list-table" *ngIf="users.length > 0">
+      <thead>
+        <tr>
+          <th class="user-list-header">Name</th>
+          <th class="user-list-header">Company</th>
+          <th class="user-list-header">Email</th>
+          <th class="user-list-header">Website</th>
+          <th class="user-list-header">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="user-list-row" *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.company.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <a [href]="getWebsiteUrl(user.website)" target="_blank">{{
+              user.website
+            }}</a>
+          </td>
+          <td class="action-column">
+            <a [routerLink]="['/user', user.id]" class="user-list-action"
+              >Details</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-template>
